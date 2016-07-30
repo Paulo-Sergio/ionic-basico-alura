@@ -17,3 +17,8 @@ angular.module('starter')
     ];
 
 });
+
+angular.module('starter')
+.controller('CarroEscolhidoController', function(){
+    
+});
