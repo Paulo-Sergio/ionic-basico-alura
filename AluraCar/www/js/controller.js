@@ -2,25 +2,25 @@ angular.module('starter')
 .controller('ListagemController', function($scope){
 
     $scope.listaDeCarros = [
-        'BMW 120i',
-        'Onix 1.6',
-        'Fiesta 2.0',
-        'C3 1.0',
-        'Uno Fire',
-        'Sentra 2.0',
-        'Astra Sedan',
-        'Vectra 2.0 Turbo',
-        'Hilux 4X4',
-        'Montana Cabine Dupla',
-        'Outlander 2.4',
-        'Fusca 1500'
+        {"nome":"BMW 120i", "preco":70000},
+        {"nome":"Onix 1.6"},
+        {"nome":"Fiesta 2.0"},
+        {"nome":"C3 1.0"},
+        {"nome":"Uno Fire"},
+        {"nome":"Sentra 2.0"},
+        {"nome":"Astra Sedan"},
+        {"nome":"Vectra 2.0 Turbo"},
+        {"nome":"Hilux 4X4"},
+        {"nome":"Montana Cabine Dupla"},
+        {"nome":"Outlander 2.4"},
+        {"nome":"Fusca 1500"}
     ];
 
 });
 
 angular.module('starter')
 .controller('CarroEscolhidoController', function($stateParams, $scope){
-//$stateParams -> recebendo os parametros :carro
-    $scope.carroEscolhido = $stateParams.carro;
+    //$stateParams -> recebendo os parametros :carro
+    $scope.carroEscolhido = angular.fromJson($stateParams.carro);
 
 });
