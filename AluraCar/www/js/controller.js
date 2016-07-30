@@ -38,3 +38,10 @@ angular.module('starter')
     };
 
 });
+
+angular.module('starter')
+.controller('FinalizarPedidoController', function(){
+
+    
+
+});
