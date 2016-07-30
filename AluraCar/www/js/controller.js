@@ -3,17 +3,17 @@ angular.module('starter')
 
     $scope.listaDeCarros = [
         {"nome":"BMW 120i", "preco":70000},
-        {"nome":"Onix 1.6"},
-        {"nome":"Fiesta 2.0"},
-        {"nome":"C3 1.0"},
-        {"nome":"Uno Fire"},
-        {"nome":"Sentra 2.0"},
-        {"nome":"Astra Sedan"},
-        {"nome":"Vectra 2.0 Turbo"},
-        {"nome":"Hilux 4X4"},
-        {"nome":"Montana Cabine Dupla"},
-        {"nome":"Outlander 2.4"},
-        {"nome":"Fusca 1500"}
+        {"nome":"Onix 1.6", "preco":35000},
+        {"nome":"Fiesta 2.0", "preco":52000},
+        {"nome":"C3 1.0", "preco":22000},
+        {"nome":"Uno Fire", "preco":11000},
+        {"nome":"Sentra 2.0", "preco":53000},
+        {"nome":"Astra Sedan", "preco":39000},
+        {"nome":"Vectra 2.0 Turbo", "preco":37000},
+        {"nome":"Hilux 4X4", "preco":90000},
+        {"nome":"Montana Cabine Dupla", "preco":57000},
+        {"nome":"Outlander 2.4", "preco":99000},
+        {"nome":"Fusca 1500", "preco":6000}
     ];
 
 });
@@ -40,8 +40,8 @@ angular.module('starter')
 });
 
 angular.module('starter')
-.controller('FinalizarPedidoController', function(){
+.controller('FinalizarPedidoController', function($stateParams, $scope){
 
-    
+    $scope.carroFinalizado = angular.fromJson($stateParams.carro);
 
 });
