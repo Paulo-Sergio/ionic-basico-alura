@@ -19,6 +19,8 @@ angular.module('starter')
 });
 
 angular.module('starter')
-.controller('CarroEscolhidoController', function(){
-    
+.controller('CarroEscolhidoController', function($stateParams, $scope){
+//$stateParams -> recebendo os parametros :carro
+    $scope.carroEscolhido = $stateParams.carro;
+
 });
