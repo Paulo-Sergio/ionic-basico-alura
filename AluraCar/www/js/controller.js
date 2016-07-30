@@ -1,6 +1,11 @@
 angular.module('starter')
-.controller('ListagemController', function($scope){
+.controller('ListagemController', function($scope, CarroService){
+    //injetando CarroService para consumir os dados da url
+    CarroService.obterCarros().then(function(dados){//function de callback
+        $scope.listaDeCarros = dados;
+    });
 
+    /*carros de forma estatica (forma antiga)
     $scope.listaDeCarros = [
         {"nome":"BMW 120i", "preco":70000},
         {"nome":"Onix 1.6", "preco":35000},
@@ -14,7 +19,7 @@ angular.module('starter')
         {"nome":"Montana Cabine Dupla", "preco":57000},
         {"nome":"Outlander 2.4", "preco":99000},
         {"nome":"Fusca 1500", "preco":6000}
-    ];
+    ];*/
 
 });
 
@@ -49,7 +54,7 @@ angular.module('starter')
             title: "Parabens",
             template: "Você acaba de comprar um carro"
         }).then(function(){
-            //quando clicar no "OK" do alert()
+            //quando clicar no "OK" do alert() | funcão de callback
             $state.go('listagem');
         });
     };
